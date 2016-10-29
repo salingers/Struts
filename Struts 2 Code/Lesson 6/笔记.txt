@@ -1,0 +1,42 @@
+NewsCatalog
+
+NewsItem
+
+http://localhost:8080/project/NewsCatalog/listNewsCatalog.action
+
+http://localhost:8080/project/NewsItem/listNewsItem.action
+
+
+login.action!myExecute
+
+Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+
+struts.multipart.saveDir
+
+List<Person> list
+
+class Person
+{
+	Address address;
+}
+
+class Address
+{
+	A a;
+}
+
+class A
+{
+	String s;
+}
+
+<s:iterator value="list" id="l">
+
+<s:property value=="#l.address.a.s"/>
+
+</s:iterator>
+
+
+
+
+
