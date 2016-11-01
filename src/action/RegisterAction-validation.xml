@@ -1,0 +1,63 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+
+	<field name="username">
+
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>賬號不能為空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">20</param>
+			<message>賬號長度應在 ${minLength} ~ ${maxLength}之間</message>
+		</field-validator>
+
+	</field>
+
+	<field name="password">
+
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>密碼不能為空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">20</param>
+			<message>密碼長度應在 ${minLength} ~ ${maxLength}之間</message>
+		</field-validator>
+
+	</field>
+
+	<field name="repassword">
+
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>重復密碼不能為空</message>
+		</field-validator>
+
+	</field>
+
+	<field name="email">
+
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>信箱不能為空</message>
+		</field-validator>
+
+		<field-validator type="email">
+			<message>信箱輸入不正確</message>
+		</field-validator>
+	</field>
+
+	<field name="validate">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>驗證碼不能為空</message>
+		</field-validator>
+
+	</field>
+
+</validators>
+ 
